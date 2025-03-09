@@ -72,4 +72,4 @@ Once inside, you can edit the following options:
 - test_size: This affects the portion of the dataset used for training and validation. The dataset starts with around 870,000 values, so 0.5 would give you about 435,000 values
 - num_epochs: This affects how many times the dataset is run through the model. A higher value generally means better performance
 
-After running the model, it will be saved in your directory as model.pt. Feel free to replace the path to the model with your own within the API script to use your own model to evaluate webpages!
+After running the model, it will be saved in your directory as model.pt. Feel free to replace the path to the model with your own within the [API script](API/api_v1.py) to use your own model to evaluate webpages!
