@@ -7,10 +7,36 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         const text = message.text;
         const topWords = getTopFrequentWords(text);
         console.log('Top 5 frequent words:', topWords);
-        searchGoogle(topWords);
+
+        // Send text to FastAPI for prediction first
+        fetch("http://127.0.0.1:8000/predict/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams({ text: text }) // FastAPI expects Form data
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Prediction result:", data);
+            
+            // Here you can decide how to use the prediction result
+            // For example, logging or displaying it in the popup
+            const prediction = data.prediction;  // Assuming "prediction" is the prediction result
+
+            // If you want to show the prediction in the popup (or somewhere else), do it here
+            
+            // Continue with Google search after prediction
+            searchGoogle(topWords);
+        })
+        .catch(error => {
+            console.error("Error during prediction:", error);
+            searchGoogle(topWords); // Proceed with search even if prediction fails
+        });
     }
 });
 
+// This listens for the message to retrieve search results
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log('Message received in background:', message);  // Log the incoming message
     if (message.action === "getSearchResults") {
@@ -21,9 +47,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         return true; // Keep the message channel open
     }
 });
-
-
-
 
 let searchResults = []; // Store search results globally
 
@@ -40,6 +63,7 @@ function getTopFrequentWords(text) {
         .map(entry => entry[0]);
 }
 
+// Perform Google Search
 async function searchGoogle(terms) {
     if (!terms.length) return;
 
@@ -54,7 +78,7 @@ async function searchGoogle(terms) {
             link: item.link
         }));
 
-        // Store results in storage
+        // Store results in session storage
         console.log('Search results:', results); // Check if the results are being fetched correctly
         await chrome.storage.session.set({ searchResults: results });
 
@@ -63,4 +87,3 @@ async function searchGoogle(terms) {
         await chrome.storage.session.set({ searchResults: [] });
     }
 }
-
