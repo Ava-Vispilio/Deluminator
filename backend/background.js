@@ -1,5 +1,5 @@
-const API_KEY = "AIzaSyDWgKTEz1d7wfjqu2fXvGDbldgPZAxmA9M";
-const SEARCH_ENGINE_ID = "c01fe5a5d0bb34903";
+const API_KEY = "YOUR_API_KEY";
+const SEARCH_ENGINE_ID = "YOUR_CUSTOM_SEARCH_ENGINE_ID";
 
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
