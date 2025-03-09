@@ -1,10 +1,10 @@
 {
     "manifest_version": 3,
-    "name": "Article Search Helper",
+    "name": "Deluminator",
     "version": "1.0",
-    "description": "Finds top terms from an article and searches them.",
+    "description": "Gives percentage likelihood of an article being fake news, and searches for 3 most relevant articles to cross check against",
     "permissions": ["activeTab", "scripting","storage"],
-    "host_permissions": ["https://www.googleapis.com/"],
+    "host_permissions": ["https://www.googleapis.com/","http://127.0.0.1:8000/*"],
     "background": {
         "service_worker": "backend/background.js"
     },
