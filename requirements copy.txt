@@ -1,3 +1,9 @@
 numpy
 jupyterlab
 fastText
+tensorflow
+contractions
+textsearch
+tqdm
+nltk
+beautifulsoup4
