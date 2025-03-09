@@ -10,7 +10,7 @@ This chrome extension achieves two goals:
 1. It scans a website and determines whether it is likely to be fake news or not
 2. If it is indeed fake news, it will recommend 3 other sources for the user to cross-reference
 
-Goal #1 is achieved using a pre-trained BERT model validated using the FAKEDDIT DATASET
+Goal #1 is achieved using a pre-trained BERT model validated using the FAKEDDIT DATASET  
 Goal #2 is achieved by parsing the text to find the top 5 most repeated terms, then searching the web to return the top 3 more relevant results as links
 
 ##  How We Built It  
