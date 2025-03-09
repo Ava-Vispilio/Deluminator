@@ -10,7 +10,7 @@ This chrome extension achieves two goals:
 1. It scans a website and determines whether it is likely to be fake news or not
 2. If it is indeed fake news, it will recommend 3 other sources for the user to cross-reference
 
-Goal #1 is achieved using a pre-trained BERT model validated using the FAKEDDIT DATASET  
+Goal #1 is achieved using a pre-trained BERT model validated using the [Fakeddit Dataset](https://fakeddit.netlify.app/)  
 Goal #2 is achieved by parsing the text to find the top 5 most repeated terms, then searching the web to return the top 3 more relevant results as links
 
 ##  How We Built It  
@@ -30,7 +30,7 @@ Model Training & LLM Fine-Tuning
 
 Deployment & User Interaction  
 1. Clone the repo and load it as an unpacked extension into Chrome
-2. Insert your own Google Custom Search API (GET IT HERE) and ID into background.js
+2. Insert your own Google Custom Search API [(get it here)](https://developers.google.com/custom-search/v1/overview) and ID into background.js
 3. Start using the extension! 
 
 ## Challenges we ran into
