@@ -1,5 +1,5 @@
 # Deluminator
-##instruction to install 
+## Instruction to install 
 step 1:  download the files, load unpacked to deluminator
 step 2: insert your own api key also and custom search engine id in background.js
 step 3: use the extension on the website
