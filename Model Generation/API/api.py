@@ -13,7 +13,7 @@ tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 
 # Load BERT model with a classification head
 model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
-model.load_state_dict(torch.load(r"path/to/your/model", map_location="cpu"))  # Adjust device as needed
+model.load_state_dict(torch.load(r"path\to\your\model", map_location="cpu"))  # Adjust device as needed
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
