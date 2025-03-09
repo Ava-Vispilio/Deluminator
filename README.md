@@ -14,11 +14,11 @@ Data Collection
 
 Preprocessing & Feature Engineering 
 - Standard NLP techniques: text cleaning, tokenization, stop-word removal, and lemmatization.  
-- Utilized TF-IDF vectorization, word embeddings (Word2Vec, GloVe), and Transformer-based embeddings (BERT embeddings).
 
 Model Training & LLM Fine-Tuning  
-- We started with baseline models like Logistic Regression for quick validation.  
-- Moved to deep learning architectures such as LSTMs and CNNs for textual classification.  
+- We started with baseline models like Simple Regression for quick validation.  
+- We then move on to Binary Classificaiton
+- Fine-tuning: Early stopping to minise loss, AdamW, CrossEntropyLoss (Binary) / BCEWithLogitsLoss (Regression).
 
 Deployment & User Interaction  
 - Added the percentage as to how likely it is to be fake news.
