@@ -3,7 +3,7 @@
 ## Inspiration  
 In today's digital age, misinformation spreads rapidly, influencing public opinion and decision-making. Inspired by the need for reliable information, we set out to develop a web-extension to help users identify deceptive content.   
 
-Like the namesake item in Harry Potter, we hope to combat misinformation by shining some light into the murkier parts of the internet that seek to mislead and misinform others
+Like the namesake [item](https://harrypotter.fandom.com/wiki/Deluminator) in Harry Potter, we hope to combat misinformation by shining some light into the murkier parts of the internet that seek to mislead and misinform others
 
 ## What it does
 This chrome extension achieves two goals:
@@ -11,14 +11,13 @@ This chrome extension achieves two goals:
 2. If it is indeed fake news, it will recommend 3 other sources for the user to cross-reference
 
 Goal #1 is achieved using a pre-trained BERT model validated using the [Fakeddit Dataset](https://fakeddit.netlify.app/)  
-Goal #2 is achieved by parsing the text to find the top 5 most repeated terms, then searching the web to return the top 3 more relevant results as links
+Goal #2 is achieved by parsing the text to find the top 5 most repeated terms, then searching the web to return the top 3 most relevant results as links
 
 ##  How We Built It  
 Our approach combines ML/AI in the form of NLP and the Google Custom Search API in an extension  
 
 Data Collection 
- - We used the Fakeddit Dataset to validate our model
- - It is based on a collection of Reddit posts and headlines
+ - We used the Fakeddit Dataset (based on a collection of Reddit posts and headlines) to validate our model
 
 Preprocessing & Feature Engineering 
 - Standard NLP techniques: Text cleaning, tokenization, embedding  
@@ -26,11 +25,11 @@ Preprocessing & Feature Engineering
 Model Training & LLM Fine-Tuning  
 - We started with Simple Regression to validate the text-preprocessing and training steps  
 - Once that was working, we switched to Binary Classification (which is what the extension uses)
-- Fine-tuning: Early stopping to minise loss, AdamW, CrossEntropyLoss (Binary) / BCEWithLogitsLoss (Regression)
+- Fine-tuning: [Early Stopping](https://en.wikipedia.org/wiki/Early_stopping), [AdamW](https://paperswithcode.com/method/adamw), [CrossEntropyLoss](https://en.wikipedia.org/wiki/Cross-entropy) (Binary) / [BCEWithLogitsLoss](https://pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html) (Regression)
 
 Deployment & User Interaction  
 1. Clone the repo and load it as an unpacked extension into Chrome
-2. Insert your own Google Custom Search API [(get it here)](https://developers.google.com/custom-search/v1/overview) and ID into background.js
+2. Insert your own Google Custom Search API [(get one here!)](https://developers.google.com/custom-search/v1/overview) and ID into [background.js](backend/background.js)
 3. Start using the extension! 
 
 ## Challenges we ran into
