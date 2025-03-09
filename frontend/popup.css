@@ -1,0 +1,63 @@
+/* Basic styles for the popup */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+/* Title of the popup */
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling the list of results */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling each list item */
+li {
+    margin: 8px 0;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Change color on hover */
+li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling the links */
+a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+/* Adding some spacing between the elements */
+#results {
+    padding: 0;
+    margin-top: 10px;
+}
+
+#results li {
+    font-size: 14px;
+}
+
+#results li a {
+    color: #0056b3;
+}
+
+#results li a:hover {
+    color: #003366;
+}

@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Article Search Helper",
+    "version": "1.0",
+    "description": "Finds top terms from an article and searches them.",
+    "permissions": ["activeTab", "scripting","storage"],
+    "host_permissions": ["https://www.googleapis.com/"],
+    "background": {
+        "service_worker": "backend/background.js"
+    },
+    "action": {
+        "default_popup": "frontend/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["backend/content.js"]
+        }
+    ]
+}
