@@ -25,10 +25,10 @@ Deployment & User Interaction
 - Used Google Custom Search API to search the top 5 most repeated terms in the article and display the top 3 most relevant results as hyperlinks
 
 ## Challenges we ran into
-- Data Imbalance – Our dataset contained more real news than fake news, leading to biased predictions. We only us eone set of data to build the model.
+- Data Imbalance – Our dataset contained more real news than fake news, leading to biased predictions. We only used one set of data to build the model.
 - Evasive Fake News – Some fake articles were so well-written that even humans struggled to classify them. 
 - Scalability Issues – Deploying a BERT-based model in a web extension required optimization techniques to reduce latency and memory usage.  
-- Misinformation Arms Race – Fake news evolves daily, making it a never-ending battle. To address this, we explored semi-supervised learning*to continuously improve our model with new data.  
+- Misinformation Arms Race – Fake news evolves daily, making it a never-ending battle. To address this, we explored semi-supervised learning*to continuously improve our model with new data.
 
 ## Conclusion  
 Building this Fake News Detector was an eye-opening experience that combined technical expertise with social impact. While our model is not perfect, it's a significant step towards a more informed digital society.  
