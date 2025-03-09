@@ -1,4 +1,8 @@
 # Deluminator
+##instruction to install 
+step 1:  download the files, load unpacked to deluminator
+step 2: insert your own api key also and custom search engine id in background.js
+step 3: use the extension on the website
 
 ## Inspiration  
 In today's digital age, misinformation spreads rapidly, influencing public opinion and decision-making. Inspired by the need for reliable information, we set out to develop a web-extension to help users identify deceptive content. Our goal was to leverage data science and machine learning to combat misinformation effectively.
