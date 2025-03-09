@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+transformers
+torch
+scipy
+numpy
+jupyterlab
+requests
+python-multipart
