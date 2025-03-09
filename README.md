@@ -55,7 +55,8 @@ The BERT folder contains the necessary files to build your own model and validat
 Here's how to set it up:
 1. Clone the folder
 2. cd into the directory
-3. Set up a pyvenv environment in the directory
+3. Download all_train.csv from [here](https://drive.google.com/drive/folders/1qYgeupmblRZDsUNaasJEtIJ6Sv-PEOlF) and add it to your directory
+4. Set up a pyvenv environment in the directory
 ```
 python -m venv [env name]
 ```
@@ -72,4 +73,4 @@ Once inside, you can edit the following options:
 - test_size: This affects the portion of the dataset used for training and validation. The dataset starts with around 870,000 values, so 0.5 would give you about 435,000 values
 - num_epochs: This affects how many times the dataset is run through the model. A higher value generally means better performance
 
-After running the model, it will be saved in your directory as model.pt. Feel free to replace the path to the model with your own within the [API script](API/api_v1.py) to use your own model to evaluate webpages!
+After running the model, it will be saved in your directory as model.pt. Feel free to replace `path\to\your\model` with your own within the [API script](Model Generation/API/api.py) to use your own model to evaluate webpages!
